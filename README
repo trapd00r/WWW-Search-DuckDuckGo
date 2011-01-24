@@ -1,0 +1,68 @@
+NAME
+    WWW::Search::DuckDuckGo - search DuckDuckGo
+
+SYNOPSIS
+      use WWW::Search::DuckDuckGo;
+
+      my $results = ddg('perl');
+
+DESCRIPTION
+    WWW::Search::DuckDuckGo provides a simple interface for searching with
+    DuckDuckGo.
+
+EXPORTS
+    None by default.
+
+FUNCTIONS
+  ddg()
+    Parameters: $query
+
+    Returns: \%results
+
+      my $results = ddg('laleh');
+
+    The main search function. Returns a data structure that might look
+    something like this:
+
+      Abstract => "Laleh Pourkarim is an Iranian-Swedish singer-songwriter and former actress. ",
+      AbstractSource => "Wikipedia",
+      AbstractText => "Laleh Pourkarim is an Iranian-Swedish singer-songwriter and former actress. ",
+      AbstractURL => "http://en.wikipedia.org/wiki/Laleh",
+      Answer => "",
+      AnswerType => "",
+      Definition => "",
+      DefinitionSource => "",
+      DefinitionURL => "",
+      Heading => "Laleh",
+      Image => "http://i.duck.co/i/eb3ccaa1.jpg",
+      RelatedTopics => [
+        {
+          FirstURL => "http://duckduckgo.com/c/Swedish_people_of_Iranian_descent",
+          Icon => {},
+          Text => "Swedish people of Iranian descent Category"
+        },
+      ],
+      Results => [
+        {
+          FirstURL => "http://www.laleh.se/",
+          Icon => {
+            Height => 16,
+            URL => "http://i.duck.co/i/laleh.se.ico",
+            Width => 16
+          },
+          Result => "<a href=\"http://www.laleh.se/\"><b>Official site</b></a>",
+          Text => "Official site"
+        }
+      ],
+
+AUTHOR
+      Magnus Woldrich
+      CPAN ID: WOLDRICH
+      magnus@trapd00r.se
+      http://japh.se
+
+COPYRIGHT
+    Copyright 2011 Magnus Woldrich <magnus@trapd00r.se>. This program is
+    free software; you may redistribute it and/or modify it under the same
+    terms as Perl itself.
+
